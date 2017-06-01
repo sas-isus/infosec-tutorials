@@ -10,8 +10,7 @@ tutorial if you're not comfortable opening and closing ports for new or
 existing chains.
 
 <div style="background-color:black, color:green">
-
-``` bash
+<pre>
           :================:
          /||# nmap -A _   ||
         / ||              ||
@@ -24,7 +23,8 @@ existing chains.
    : |  *   |__________|| ::::::::::  |
    \ |      |          ||   .......   |
      --------------------------------- 8
-```
+     
+</pre>
 </div >
 
   NMAP IS A POWERFUL TOOL -- USE CAREFULLY AND RESPONSIBLY
