@@ -3,12 +3,6 @@ Nmap Tutorial
 
 By: @_clayball
 
-
-This tutorial will cover the basic usage details of Nmap along with a few use 
-cases and advanced scanning techniques. You may want to review the IPtables
-tutorial if you're not comfortable opening and closing ports for new or
-existing chains.
-
 ``` bash
           :================:
          /||# nmap -A _   ||
@@ -25,6 +19,17 @@ existing chains.
 ```
 
   NMAP IS A POWERFUL TOOL -- USE CAREFULLY AND RESPONSIBLY
+
+This tutorial will cover the basic usage details of Nmap along with a few use 
+cases and advanced scanning techniques. You may want to review the IPtables
+tutorial if you're not comfortable opening and closing ports for new or
+existing chains.
+
+If you're serious about learning Nmap read the man page. Bits and pieces of
+this tutorial pull information directly from the man page.
+
+I also recommend reading the Nmap book for deeper understanding of how Nmap
+works and the various ways in which it can be used.
 
 
 ## Introduction
@@ -79,17 +84,16 @@ include the version of Nmap with the distro's version as of May, 2017.
 
 TODO: complete the table below
 
-| Distro    | Version | Nmap Version |
-| --------- | ------- | ------------ |
-| CentoOS   | 6       |
-| CentoOS   | 7       |              
-| RHEL      | 6       |
-| RHEL      | 7       |
-| Fedora    | 25      | nmap-7.40-1
-| Ubuntu    |         |
-| Ubuntu    |         |
-| Debian    | 8.8.0   |
-| Kali      |         |
+| Distro    | Version  | Nmap Version |
+| --------- | -------- | ------------ |
+| CentoOS   | 6        |
+| CentoOS   | 7        |              
+| RHEL      | 6        |
+| RHEL      | 7        |
+| Fedora    | 25       | 7.40-1
+| Ubuntu    | 16.04 LTS | 7.01 
+| Debian    | 8.8.0     |
+| Kali      |           |
 
 
 For most situations this is totally fine. However, if you'd like to utilize
@@ -184,7 +188,7 @@ These details can be reviewed by consulting Nmap's man page.
 
 **The six port states recognized by Nmap**
 
-open
+- open
     An application is actively accepting TCP connections, UDP datagrams or
     SCTP associations on this port. Finding these is often the primary goal
     of port scanning. Security-minded people know that each open port is an
@@ -194,7 +198,7 @@ open
     non-security scans because they show services available for use on the
     network.
 
-closed
+- closed
     A closed port is accessible (it receives and responds to Nmap probe
     packets), but there is no application listening on it. They can be
     helpful in showing that a host is up on an IP address (host discovery, or
@@ -203,7 +207,7 @@ closed
     Administrators may want to consider blocking such ports with a firewall.
     Then they would appear in the filtered state, discussed next.
 
-filtered
+- filtered
     Nmap cannot determine whether the port is open because packet filtering
     prevents its probes from reaching the port. The filtering could be from a
     dedicated firewall device, router rules, or host-based firewall software.
@@ -215,14 +219,14 @@ filtered
     the probe was dropped due to network congestion rather than filtering.
     This slows down the scan dramatically.
 
-unfiltered
+- unfiltered
     The unfiltered state means that a port is accessible, but Nmap is unable
     to determine whether it is open or closed. Only the ACK scan, which is
     used to map firewall rulesets, classifies ports into this state. Scanning
     unfiltered ports with other scan types such as Window scan, SYN scan, or
     FIN scan, may help resolve whether the port is open.
 
-open|filtered
+- open|filtered
     Nmap places ports in this state when it is unable to determine whether a
     port is open or filtered. This occurs for scan types in which open ports
     give no response. The lack of response could also mean that a packet
@@ -230,7 +234,7 @@ open|filtered
     know for sure whether the port is open or being filtered. The UDP, IP
     protocol, FIN, NULL, and Xmas scans classify ports this way.
 
-closed|filtered
+- closed|filtered
     This state is used when Nmap is unable to determine whether a port is
     closed or filtered. It is only used for the IP ID idle scan.
 
