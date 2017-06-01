@@ -56,17 +56,17 @@ Nmap's original author is Gordon “Fyodor” Lyon.
 Most, if not all, Linux distributions package nmap. So, installation should be
 as easy as.. 
 
-RHEL 6 based distros
+RHEL based distros
 
 ```$ sudo yum install nmap```
 
-RHEL 7 based distros
+Fedora
 
 ```$ sudo dnf install nmap```
 
 Debian-based distros
 
-```$ sudo apt-get install nmap```
+```$ sudo apt install nmap```
 
 Gentoo
 
