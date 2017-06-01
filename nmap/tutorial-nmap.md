@@ -92,7 +92,7 @@ TODO: complete the table below
 | RHEL      | 7        |
 | Fedora    | 25       | 7.40-1
 | Ubuntu    | 16.04 LTS | 7.01 
-| Debian    | 8.8.0     |
+| Debian    | 8.8.0     | 6.47
 | Kali      |           |
 
 
