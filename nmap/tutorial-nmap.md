@@ -53,13 +53,24 @@ Nmap's original author is Gordon “Fyodor” Lyon.
 ## Installation
 
 Most, if not all, Linux distributions package nmap. So, installation should be
-as easy as.. (RHEL/CentOS 6 users replace ```dnf``` with ```yum```)
+as easy as.. 
+
+RHEL 6 based distros
+
+```$ sudo yum install nmap```
+
+RHEL 7 based distros
 
 ```$ sudo dnf install nmap```
 
-or for Debian related folks..
+Debian-based distros
 
 ```$ sudo apt-get install nmap```
+
+Gentoo
+
+```root # emerge --ask net-analyzer/nmap```
+
 
 Installing Nmap using the package manager for your distro will limit you to
 the specific version packaged for your distro's version. The following table
@@ -72,9 +83,10 @@ TODO: complete the table below
 | CentoOS   | 6       |
 | CentoOS   | 7       |              
 | RHEL      | 6       |
+| RHEL      | 7       |
+| Fedora    | 25      | nmap-7.40-1
 | Ubuntu    |         |
 | Ubuntu    |         |
-| Debian    |         |
 | Debian    | 8.8.0   |
 | Kali      |         |
 
@@ -220,6 +232,7 @@ open|filtered
 closed|filtered
     This state is used when Nmap is unable to determine whether a port is
     closed or filtered. It is only used for the IP ID idle scan.
+
 
 
 
