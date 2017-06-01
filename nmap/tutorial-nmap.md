@@ -9,7 +9,7 @@ cases and advanced scanning techniques. You may want to review the IPtables
 tutorial if you're not comfortable opening and closing ports for new or
 existing chains.
 
-```
+``` bash
           :================:
          /||# nmap -A _   ||
         / ||              ||
