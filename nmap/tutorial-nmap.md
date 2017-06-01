@@ -9,6 +9,7 @@ cases and advanced scanning techniques. You may want to review the IPtables
 tutorial if you're not comfortable opening and closing ports for new or
 existing chains.
 
+<span style="background-color:black, color:green">
 ``` bash
           :================:
          /||# nmap -A _   ||
@@ -23,6 +24,7 @@ existing chains.
    \ |      |          ||   .......   |
      --------------------------------- 8
 ```
+</span>
 
   NMAP IS A POWERFUL TOOL -- USE CAREFULLY AND RESPONSIBLY
 
