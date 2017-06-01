@@ -5,8 +5,9 @@ By: @_clayball
 
 
 This tutorial will cover the basic usage details of Nmap along with a few use 
-cases and advanced scanning techniques. Please review the IPtables Primer if
-you're not comfortable opening and closing ports for new or existing chains.
+cases and advanced scanning techniques. You may want to review the IPtables
+tutorial if you're not comfortable opening and closing ports for new or
+existing chains.
 
 ```
           :================:
